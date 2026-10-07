@@ -1,0 +1,75 @@
+{
+  "decoder": "vtdec_hw",
+  "dropped": 1,
+  "error": "",
+  "events": [
+    {
+      "error": "",
+      "state": "STOPPED",
+      "time": "2026-10-07T09:07:56Z"
+    },
+    {
+      "error": "",
+      "state": "CONNECTING",
+      "time": "2026-10-07T09:07:56Z"
+    },
+    {
+      "error": "",
+      "state": "PLAYING",
+      "time": "2026-10-07T09:07:58Z"
+    },
+    {
+      "error": "视频流已结束",
+      "state": "STALLED",
+      "time": "2026-10-07T09:08:03Z"
+    },
+    {
+      "error": "视频流已结束",
+      "state": "RECONNECTING",
+      "time": "2026-10-07T09:08:03Z"
+    },
+    {
+      "error": "视频流已结束",
+      "state": "CONNECTING",
+      "time": "2026-10-07T09:08:04Z"
+    },
+    {
+      "error": "Could not read from resource.\n../gst/rtsp/gstrtspsrc.c(6713): gst_rtsp_src_receive_response (): /GstPipeline:a8_video/GstRTSPSrc:rtsp_source:\nCould not receive message. (System error)",
+      "state": "STALLED",
+      "time": "2026-10-07T09:08:05Z"
+    },
+    {
+      "error": "Could not read from resource.\n../gst/rtsp/gstrtspsrc.c(6713): gst_rtsp_src_receive_response (): /GstPipeline:a8_video/GstRTSPSrc:rtsp_source:\nCould not receive message. (System error)",
+      "state": "RECONNECTING",
+      "time": "2026-10-07T09:08:05Z"
+    },
+    {
+      "error": "Could not read from resource.\n../gst/rtsp/gstrtspsrc.c(6713): gst_rtsp_src_receive_response (): /GstPipeline:a8_video/GstRTSPSrc:rtsp_source:\nCould not receive message. (System error)",
+      "state": "CONNECTING",
+      "time": "2026-10-07T09:08:07Z"
+    },
+    {
+      "error": "",
+      "state": "PLAYING",
+      "time": "2026-10-07T09:08:09Z"
+    }
+  ],
+  "fps": 26.052104208416832,
+  "gstreamer": "GStreamer 1.22.12",
+  "height": 1080,
+  "latency_ms": 300,
+  "passed": true,
+  "qt": "5.15.2",
+  "reconnects": 2,
+  "rendered": 383,
+  "source": "rtsp",
+  "state": "PLAYING",
+  "timestamp": "2026-10-07T09:08:20Z",
+  "width": 1920,
+  "fault_injection": {
+    "connection_dropped_at_s": 7,
+    "unavailable_s": 4,
+    "exit_code": 0,
+    "recovered": true
+  }
+}

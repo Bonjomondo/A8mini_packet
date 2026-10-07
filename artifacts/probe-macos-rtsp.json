@@ -1,0 +1,34 @@
+{
+    "decoder": "vtdec_hw",
+    "dropped": 0,
+    "error": "",
+    "events": [
+        {
+            "error": "",
+            "state": "STOPPED",
+            "time": "2026-10-07T09:09:08Z"
+        },
+        {
+            "error": "",
+            "state": "CONNECTING",
+            "time": "2026-10-07T09:09:08Z"
+        },
+        {
+            "error": "",
+            "state": "PLAYING",
+            "time": "2026-10-07T09:09:11Z"
+        }
+    ],
+    "fps": 26.052104208416832,
+    "gstreamer": "GStreamer 1.22.12",
+    "height": 1080,
+    "latency_ms": 300,
+    "passed": true,
+    "qt": "5.15.2",
+    "reconnects": 0,
+    "rendered": 82,
+    "source": "rtsp",
+    "state": "PLAYING",
+    "timestamp": "2026-10-07T09:09:14Z",
+    "width": 1920
+}
