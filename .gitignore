@@ -3,10 +3,3 @@ artifacts/client-credentials.json
 artifacts/mediamtx.installed.yml
 artifacts/rollback-*/
 __pycache__/
-.deps/
-.tools/
-build*/
-*.user
-.DS_Store
-artifacts/probe-*.png
-aqtinstall.log
