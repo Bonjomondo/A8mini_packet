@@ -1,0 +1,76 @@
+# Paths
+paths{name="a8mini",state="ready"} 1
+paths_readers{name="a8mini",readerType="rtspSession",state="ready"} 2
+paths_inbound_bytes{name="a8mini",state="ready"} 1173899
+paths_outbound_bytes{name="a8mini",state="ready"} 1831986
+paths_inbound_frames_in_error{name="a8mini",state="ready"} 0
+
+# Paths (deprecated)
+paths_bytes_received{name="a8mini",state="ready"} 1173899
+paths_bytes_sent{name="a8mini",state="ready"} 1831986
+
+# RTSP connections
+rtsp_conns{id="46f76e6d-ab4b-4780-be99-b0030dc9131f"} 1
+rtsp_conns_inbound_bytes{id="46f76e6d-ab4b-4780-be99-b0030dc9131f"} 1458
+rtsp_conns_outbound_bytes{id="46f76e6d-ab4b-4780-be99-b0030dc9131f"} 919748
+rtsp_conns{id="c5e7678d-aac0-4fa7-b782-986ccfe8aa35"} 1
+rtsp_conns_inbound_bytes{id="c5e7678d-aac0-4fa7-b782-986ccfe8aa35"} 1448
+rtsp_conns_outbound_bytes{id="c5e7678d-aac0-4fa7-b782-986ccfe8aa35"} 919744
+
+# RTSP connections (deprecated)
+rtsp_conns_bytes_received{id="46f76e6d-ab4b-4780-be99-b0030dc9131f"} 1458
+rtsp_conns_bytes_sent{id="46f76e6d-ab4b-4780-be99-b0030dc9131f"} 919748
+rtsp_conns_bytes_received{id="c5e7678d-aac0-4fa7-b782-986ccfe8aa35"} 1448
+rtsp_conns_bytes_sent{id="c5e7678d-aac0-4fa7-b782-986ccfe8aa35"} 919744
+
+# RTSP sessions
+# The remoteAddr label is deprecated.
+rtsp_sessions{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 1
+rtsp_sessions_inbound_bytes{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 84
+rtsp_sessions_inbound_rtp_packets{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_lost{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_in_error{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_jitter{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_inbound_rtcp_packets{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 2
+rtsp_sessions_inbound_rtcp_packets_in_error{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_outbound_bytes{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 916021
+rtsp_sessions_outbound_rtp_packets{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 673
+rtsp_sessions_outbound_rtp_packets_reported_lost{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_outbound_rtp_packets_discarded{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_outbound_rtcp_packets{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 1
+rtsp_sessions{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 1
+rtsp_sessions_inbound_bytes{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 84
+rtsp_sessions_inbound_rtp_packets{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_lost{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_in_error{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_inbound_rtp_packets_jitter{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_inbound_rtcp_packets{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 2
+rtsp_sessions_inbound_rtcp_packets_in_error{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_outbound_bytes{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 916021
+rtsp_sessions_outbound_rtp_packets{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 673
+rtsp_sessions_outbound_rtp_packets_reported_lost{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_outbound_rtp_packets_discarded{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_outbound_rtcp_packets{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 1
+
+# RTSP sessions (deprecated)
+rtsp_sessions_bytes_received{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 84
+rtsp_sessions_bytes_sent{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 916021
+rtsp_sessions_rtp_packets_received{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_rtp_packets_sent{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 673
+rtsp_sessions_rtp_packets_lost{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_rtp_packets_in_error{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_rtp_packets_jitter{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_rtcp_packets_received{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 2
+rtsp_sessions_rtcp_packets_sent{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 1
+rtsp_sessions_rtcp_packets_in_error{id="4dedaf76-66cc-4961-8943-9c109b9b4f94",path="a8mini",remoteAddr="192.168.1.5:49628",state="read"} 0
+rtsp_sessions_bytes_received{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 84
+rtsp_sessions_bytes_sent{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 916021
+rtsp_sessions_rtp_packets_received{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_rtp_packets_sent{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 673
+rtsp_sessions_rtp_packets_lost{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_rtp_packets_in_error{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_rtp_packets_jitter{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+rtsp_sessions_rtcp_packets_received{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 2
+rtsp_sessions_rtcp_packets_sent{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 1
+rtsp_sessions_rtcp_packets_in_error{id="f6986b3b-c3fe-4d06-93da-90574ea04a96",path="a8mini",remoteAddr="192.168.2.113:57124",state="read"} 0
+

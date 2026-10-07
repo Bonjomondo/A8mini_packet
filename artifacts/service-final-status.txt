@@ -1,0 +1,19 @@
+● mediamtx-a8mini.service - A8 mini RTSP TCP proxy (MediaMTX)
+     Loaded: loaded (/etc/systemd/system/mediamtx-a8mini.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2026-10-07 16:30:53 CST; 3min 46s ago
+   Main PID: 13744 (mediamtx)
+      Tasks: 14 (limit: 18279)
+     Memory: 27.3M
+     CGroup: /system.slice/mediamtx-a8mini.service
+             └─13744 /usr/local/lib/mediamtx/v1.21.1/mediamtx /etc/mediamtx/mediamtx.yml
+
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [session 4dedaf76] created by 192.168.1.5:49628
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [session f6986b3b] created by 192.168.2.113:57124
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [path a8mini] RTP packets are too big (8180 > 1440), remuxing them into smaller ones
+Oct 07 16:31:49 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:49 INF [RTSP] [session f6986b3b] is reading from path 'a8mini', with TCP, 1 track (H265)
+Oct 07 16:31:49 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:49 INF [RTSP] [session 4dedaf76] is reading from path 'a8mini', with TCP, 1 track (H265)
+Oct 07 16:32:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:32:48 INF [RTSP] [session 4dedaf76] destroyed: torn down by 192.168.1.5:49628
+Oct 07 16:32:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:32:48 INF [RTSP] [session f6986b3b] destroyed: torn down by 192.168.2.113:57124
+Oct 07 16:32:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:32:48 INF [RTSP] [conn 192.168.2.113:57124] closed: EOF
+Oct 07 16:32:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:32:48 INF [RTSP] [conn 192.168.1.5:49628] closed: EOF
+Oct 07 16:32:58 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:32:58 INF [path a8mini] [RTSP source] stopped: not needed by anyone

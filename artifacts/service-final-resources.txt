@@ -1,0 +1,7 @@
+MainPID=13744
+NRestarts=1
+MemoryCurrent=28684288
+CPUUsageNSec=[not set]
+ActiveState=active
+SubState=running
+UnitFileState=enabled

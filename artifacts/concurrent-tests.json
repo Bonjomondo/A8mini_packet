@@ -1,0 +1,14 @@
+[
+  {
+    "output": "artifacts/direct-concurrent.json",
+    "exit_code": 1
+  },
+  {
+    "output": "artifacts/wired-proxy-concurrent.json",
+    "exit_code": 1
+  },
+  {
+    "output": "artifacts/wifi-proxy-concurrent.json",
+    "exit_code": 0
+  }
+]

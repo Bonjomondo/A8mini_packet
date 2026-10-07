@@ -1,0 +1,4 @@
+Version: v1.21.1
+Release: https://github.com/bluenviron/mediamtx/releases/tag/v1.21.1
+Archive SHA256: 6a3aa635fb60ea9b8d566ec306f0a42ff1b6b52a3942bc2baffbe55880d4c3dd
+Verified against GitHub release digest and checksums.sha256

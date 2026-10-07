@@ -1,0 +1,28 @@
+# 实时识别运行参数。三个功能开关在当前任务的 points.yaml / coverage_*.yaml 中。
+# 检测进程使用本工作空间的 Python 环境；ROS 节点仍使用系统 Python。
+# 工作空间搬迁后需同步更新此绝对路径。
+python_executable: /home/ly/Documents/diff-planner-A8miniV2/.venv-a8mini/bin/python
+source: rtsp://192.168.144.25:8554/main.264
+# 优先 Jetson GStreamer/NVDEC 硬解，失败后自动回退 FFmpeg。
+# pip OpenCV 无 GStreamer 时使用系统 python3-gi / Gst appsink，保持采集进程隔离。
+backend: auto
+# 真机流是 H.265，不能根据 main.264 文件名判断；GStreamer 后端需要此参数。
+codec: h265
+imgsz: 640
+conf: 0.55
+max_fps: 30
+cpu_threads: 2
+# 允许短时网络抖动；重连超时与旧帧有效期分别设置，不把旧画面当实时结果。
+# FFmpeg 不使用 latency_ms；不要把它当作 FFmpeg 的缓存长度。
+latency_ms: 200
+open_timeout_ms: 5000
+read_timeout_ms: 2500
+reconnect_delay: 1.0
+max_frame_age_ms: 1000
+# 本仓库 a8mini_capture 从 read 开始计算本地帧年龄；耗时达到读取超时即重连，
+# 即使 OpenCV 返回成功也不接受。连续无合格帧另有独立 watchdog。
+# 无桌面时设为 false；无 DISPLAY 时也会自动关闭窗口。
+display: true
+video_dir: ~/Videos/a8mini_detection
+# AVI/MJPEG，视频按实际处理帧顺序保存；掉帧/断流时不补旧帧。
+video_fps: 25

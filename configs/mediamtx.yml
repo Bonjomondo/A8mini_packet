@@ -1,0 +1,49 @@
+# Jetson A8 mini proxy; configuration pinned to MediaMTX v1.21.1.
+# No transcoding. The camera path is named main.264 but carries H.265.
+logLevel: info
+logDestinations: [stdout]
+readTimeout: 10s
+writeTimeout: 10s
+writeQueueSize: 512
+
+authMethod: internal
+authInternalUsers:
+  - user: a8viewer
+    pass: __GENERATED_PASSWORD__
+    ips: [127.0.0.1, 192.168.1.0/24, 192.168.2.0/24]
+    permissions:
+      - action: read
+        path: a8mini
+  - user: any
+    ips: [127.0.0.1, '::1']
+    permissions:
+      - action: api
+      - action: metrics
+
+api: true
+apiAddress: 127.0.0.1:9997
+metrics: true
+metricsAddress: 127.0.0.1:9998
+pprof: false
+playback: false
+
+rtsp: true
+# IPv4 only; the camera NIC and public/global IPv6 cannot authenticate as a reader.
+rtspAddress: 0.0.0.0:8554
+rtspTransports: [tcp]
+rtspEncryption: 'no'
+rtmp: false
+hls: false
+webrtc: false
+srt: false
+moq: false
+
+paths:
+  a8mini:
+    source: rtsp://192.168.144.25:8554/main.264
+    rtspTransport: tcp
+    # Release the extra camera connection when no ground client is viewing.
+    sourceOnDemand: true
+    sourceOnDemandStartTimeout: 20s
+    sourceOnDemandCloseAfter: 10s
+    record: false

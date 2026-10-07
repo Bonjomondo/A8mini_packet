@@ -1,0 +1,67 @@
+-- Logs begin at Thu 1970-01-01 08:00:39 CST, end at Wed 2026-10-07 16:31:51 CST. --
+Oct 07 16:25:12 ubuntu systemd[1]: Started A8 mini RTSP TCP proxy (MediaMTX).
+Oct 07 16:25:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:12 INF MediaMTX v1.21.1, linux, arm64
+Oct 07 16:25:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:12 INF configuration loaded from /etc/mediamtx/mediamtx.yml
+Oct 07 16:25:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:12 INF [metrics] started with listener on 127.0.0.1:9998 (TCP/HTTP)
+Oct 07 16:25:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:12 INF [RTSP] started with listeners on 0.0.0.0:8554 (TCP/RTSP)
+Oct 07 16:25:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:12 INF [API] started with listener on 127.0.0.1:9997 (TCP/HTTP)
+Oct 07 16:25:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:25 INF [RTSP] [conn 127.0.0.1:42546] opened
+Oct 07 16:25:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:25 INF [path a8mini] [RTSP source] started on demand
+Oct 07 16:25:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:25 INF [path a8mini] stream is available and online, 1 track (H265)
+Oct 07 16:25:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:25 INF [RTSP] [session 3865b64b] created by 127.0.0.1:42546
+Oct 07 16:25:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:25 INF [path a8mini] RTP packets are too big (8180 > 1440), remuxing them into smaller ones
+Oct 07 16:25:26 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:25:26 INF [RTSP] [session 3865b64b] is reading from path 'a8mini', with TCP, 1 track (H265)
+Oct 07 16:27:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:25 INF [RTSP] [session 3865b64b] destroyed: torn down by 127.0.0.1:42546
+Oct 07 16:27:25 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:25 INF [RTSP] [conn 127.0.0.1:42546] closed: EOF
+Oct 07 16:27:35 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:35 INF [path a8mini] [RTSP source] stopped: not needed by anyone
+Oct 07 16:27:42 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:42 INF [RTSP] [conn 127.0.0.1:43938] opened
+Oct 07 16:27:42 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:42 INF [RTSP] [conn 127.0.0.1:43938] closed: EOF
+Oct 07 16:27:42 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:42 INF [RTSP] [conn 127.0.0.1:43940] opened
+Oct 07 16:27:42 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:42 WAR [RTSP] [conn 127.0.0.1:43940] failed to authenticate: authentication failed
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [RTSP] [conn 127.0.0.1:43940] closed: failed to authenticate: authentication failed
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [RTSP] [conn 127.0.0.1:43946] opened
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [path a8mini] [RTSP source] started on demand
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [path a8mini] stream is available and online, 1 track (H265)
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [RTSP] [conn 127.0.0.1:43946] closed: EOF
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [RTSP] [conn 192.168.144.30:40141] opened
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 WAR [RTSP] [conn 192.168.144.30:40141] failed to authenticate: authentication failed
+Oct 07 16:27:43 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:43 INF [path a8mini] RTP packets are too big (8180 > 1440), remuxing them into smaller ones
+Oct 07 16:27:46 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:46 INF [RTSP] [conn 192.168.144.30:40141] closed: failed to authenticate: authentication failed
+Oct 07 16:27:53 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:27:53 INF [path a8mini] [RTSP source] stopped: not needed by anyone
+Oct 07 16:28:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:12 INF [RTSP] [conn 192.168.2.107:51946] opened
+Oct 07 16:28:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:12 INF [path a8mini] [RTSP source] started on demand
+Oct 07 16:28:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:12 INF [path a8mini] stream is available and online, 1 track (H265)
+Oct 07 16:28:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:12 INF [RTSP] [session 055f9cd7] created by 192.168.2.107:51946
+Oct 07 16:28:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:12 INF [path a8mini] RTP packets are too big (8180 > 1440), remuxing them into smaller ones
+Oct 07 16:28:13 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:28:13 INF [RTSP] [session 055f9cd7] is reading from path 'a8mini', with TCP, 1 track (H265)
+Oct 07 16:29:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:29:12 INF [RTSP] [session 055f9cd7] destroyed: torn down by 192.168.2.107:51946
+Oct 07 16:29:12 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:29:12 INF [RTSP] [conn 192.168.2.107:51946] closed: EOF
+Oct 07 16:29:22 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:29:22 INF [path a8mini] [RTSP source] stopped: not needed by anyone
+Oct 07 16:30:50 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:30:50 INF shutting down gracefully
+Oct 07 16:30:50 ubuntu systemd[1]: Stopping A8 mini RTSP TCP proxy (MediaMTX)...
+Oct 07 16:30:50 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:30:50 INF [API] closing
+Oct 07 16:30:50 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:30:50 INF [RTSP] closing
+Oct 07 16:30:50 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:30:50 INF [metrics] closing
+Oct 07 16:30:50 ubuntu mediamtx-a8mini[13098]: 2026/10/07 16:30:50 INF waiting for running hooks
+Oct 07 16:30:50 ubuntu systemd[1]: mediamtx-a8mini.service: Succeeded.
+Oct 07 16:30:50 ubuntu systemd[1]: Stopped A8 mini RTSP TCP proxy (MediaMTX).
+Oct 07 16:30:50 ubuntu systemd[1]: Started A8 mini RTSP TCP proxy (MediaMTX).
+Oct 07 16:30:50 ubuntu systemd[1]: mediamtx-a8mini.service: Main process exited, code=killed, status=9/KILL
+Oct 07 16:30:50 ubuntu systemd[1]: mediamtx-a8mini.service: Failed with result 'signal'.
+Oct 07 16:30:53 ubuntu systemd[1]: mediamtx-a8mini.service: Scheduled restart job, restart counter is at 1.
+Oct 07 16:30:53 ubuntu systemd[1]: Stopped A8 mini RTSP TCP proxy (MediaMTX).
+Oct 07 16:30:53 ubuntu systemd[1]: Started A8 mini RTSP TCP proxy (MediaMTX).
+Oct 07 16:30:53 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:30:53 INF MediaMTX v1.21.1, linux, arm64
+Oct 07 16:30:53 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:30:53 INF configuration loaded from /etc/mediamtx/mediamtx.yml
+Oct 07 16:30:53 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:30:53 INF [metrics] started with listener on 127.0.0.1:9998 (TCP/HTTP)
+Oct 07 16:30:53 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:30:53 INF [RTSP] started with listeners on 0.0.0.0:8554 (TCP/RTSP)
+Oct 07 16:30:53 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:30:53 INF [API] started with listener on 127.0.0.1:9997 (TCP/HTTP)
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [conn 192.168.2.113:57124] opened
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [conn 192.168.1.5:49628] opened
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [path a8mini] [RTSP source] started on demand
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [path a8mini] stream is available and online, 1 track (H265)
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [session 4dedaf76] created by 192.168.1.5:49628
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [RTSP] [session f6986b3b] created by 192.168.2.113:57124
+Oct 07 16:31:48 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:48 INF [path a8mini] RTP packets are too big (8180 > 1440), remuxing them into smaller ones
+Oct 07 16:31:49 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:49 INF [RTSP] [session f6986b3b] is reading from path 'a8mini', with TCP, 1 track (H265)
+Oct 07 16:31:49 ubuntu mediamtx-a8mini[13744]: 2026/10/07 16:31:49 INF [RTSP] [session 4dedaf76] is reading from path 'a8mini', with TCP, 1 track (H265)

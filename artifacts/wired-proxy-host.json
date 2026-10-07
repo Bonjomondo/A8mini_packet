@@ -1,0 +1,42 @@
+{
+  "url": "rtsp://192.168.1.5:8554/a8mini",
+  "timestamp": "2026-10-07T16:31:48.751238+08:00",
+  "duration_requested_s": 60.0,
+  "latency_ms": 300,
+  "decoder": "nvv4l2decoder",
+  "frames": 1474,
+  "first_frame_s": 1.234157028000027,
+  "max_frame_gap_s": 0.06615862199987532,
+  "errors": [],
+  "warnings": [],
+  "samples": [
+    {
+      "elapsed_s": 10.046,
+      "frames": 223
+    },
+    {
+      "elapsed_s": 20.068,
+      "frames": 474
+    },
+    {
+      "elapsed_s": 30.092,
+      "frames": 724
+    },
+    {
+      "elapsed_s": 40.023,
+      "frames": 973
+    },
+    {
+      "elapsed_s": 50.045,
+      "frames": 1223
+    },
+    {
+      "elapsed_s": 60.067,
+      "frames": 1474
+    }
+  ],
+  "caps": "video/x-raw(memory:NVMM), format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)25/1, nvbuf-memory-type=(string)nvbuf-mem-surface-array, gpu-id=(int)0",
+  "elapsed_s": 60.067190285999914,
+  "average_fps": 25.05395214855034,
+  "passed": true
+}

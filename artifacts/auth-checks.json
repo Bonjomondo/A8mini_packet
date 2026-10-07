@@ -1,0 +1,22 @@
+[
+  {
+    "name": "anonymous",
+    "status": "RTSP/1.0 401 Unauthorized",
+    "passed": true
+  },
+  {
+    "name": "wrong_password",
+    "status": "RTSP/1.0 401 Unauthorized",
+    "passed": true
+  },
+  {
+    "name": "valid_credentials",
+    "status": "RTSP/1.0 200 OK",
+    "passed": true
+  },
+  {
+    "name": "camera_subnet_blocked",
+    "status": "RTSP/1.0 401 Unauthorized",
+    "passed": true
+  }
+]

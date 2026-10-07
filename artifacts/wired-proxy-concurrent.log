@@ -1,0 +1,28 @@
+{"elapsed_s": 10.061, "frames": 0}
+{
+  "url": "rtsp://192.168.1.5:8554/a8mini",
+  "timestamp": "2026-10-07T16:28:12.075117+08:00",
+  "duration_requested_s": 60.0,
+  "latency_ms": 300,
+  "decoder": "nvv4l2decoder",
+  "frames": 0,
+  "first_frame_s": null,
+  "max_frame_gap_s": 0,
+  "errors": [
+    {
+      "error": "gst-resource-error-quark: Could not read from resource. (9)",
+      "debug": "gstrtspsrc.c(6421): gst_rtspsrc_try_send (): /GstPipeline:pipeline0/GstRTSPSrc:source:\nCould not receive message. (Received end-of-file)"
+    }
+  ],
+  "warnings": [],
+  "samples": [
+    {
+      "elapsed_s": 10.061,
+      "frames": 0
+    }
+  ],
+  "elapsed_s": 10.100873277000119,
+  "average_fps": 0.0,
+  "passed": false
+}
+Opening in BLOCKING MODE 

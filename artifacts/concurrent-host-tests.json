@@ -1,0 +1,14 @@
+[
+  {
+    "test": "direct-host",
+    "exit_code": 0
+  },
+  {
+    "test": "wired-proxy-host",
+    "exit_code": 0
+  },
+  {
+    "test": "wifi-proxy-host",
+    "exit_code": 0
+  }
+]

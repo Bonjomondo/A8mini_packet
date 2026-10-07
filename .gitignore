@@ -1,0 +1,5 @@
+# Local credential files must never be committed or shared with diagnostics.
+artifacts/client-credentials.json
+artifacts/mediamtx.installed.yml
+artifacts/rollback-*/
+__pycache__/

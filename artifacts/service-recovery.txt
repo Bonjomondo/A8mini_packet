@@ -1,0 +1,12 @@
+2026-10-07T16:30:55+08:00
+Manual restart: PID 13098 -> 13709
+Crash recovery: PID 13709 -> 13744
+Automatic restart counter: 0 -> 1
+active
+enabled
+640 root:mediamtx-a8mini /etc/mediamtx/mediamtx.yml
+644 root:root /etc/systemd/system/mediamtx-a8mini.service
+755 root:root /usr/local/lib/mediamtx/v1.21.1/mediamtx
+mediamtx-a8mini:x:999:993::/nonexistent:/usr/sbin/nologin
+mediamtx-a8mini:x:993:
+mediamtx-a8mini L 10/07/2026 -1 -1 -1 -1

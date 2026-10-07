@@ -1,0 +1,4 @@
+gstreamer1.0-tools 1.16.3-0ubuntu1.2
+libgstreamer1.0-0 1.16.3-0ubuntu1.2
+nvidia-l4t-core 35.6.5-20260701022834
+qtbase5-dev 5.12.8+dfsg-0ubuntu2.1

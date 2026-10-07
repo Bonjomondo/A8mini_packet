@@ -1,0 +1,66 @@
+{
+  "url": "rtsp://127.0.0.1:8554/a8mini",
+  "timestamp": "2026-10-07T16:25:25.777958+08:00",
+  "duration_requested_s": 120.0,
+  "latency_ms": 300,
+  "decoder": "nvv4l2decoder",
+  "frames": 2973,
+  "first_frame_s": 1.2465274829996815,
+  "max_frame_gap_s": 0.06982641100012188,
+  "errors": [],
+  "warnings": [],
+  "samples": [
+    {
+      "elapsed_s": 10.056,
+      "frames": 224
+    },
+    {
+      "elapsed_s": 20.08,
+      "frames": 474
+    },
+    {
+      "elapsed_s": 30.005,
+      "frames": 722
+    },
+    {
+      "elapsed_s": 40.031,
+      "frames": 973
+    },
+    {
+      "elapsed_s": 50.053,
+      "frames": 1223
+    },
+    {
+      "elapsed_s": 60.074,
+      "frames": 1474
+    },
+    {
+      "elapsed_s": 70.096,
+      "frames": 1724
+    },
+    {
+      "elapsed_s": 80.018,
+      "frames": 1973
+    },
+    {
+      "elapsed_s": 90.045,
+      "frames": 2223
+    },
+    {
+      "elapsed_s": 100.066,
+      "frames": 2474
+    },
+    {
+      "elapsed_s": 110.089,
+      "frames": 2724
+    },
+    {
+      "elapsed_s": 120.011,
+      "frames": 2972
+    }
+  ],
+  "caps": "video/x-raw(memory:NVMM), format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)25/1, nvbuf-memory-type=(string)nvbuf-mem-surface-array, gpu-id=(int)0",
+  "elapsed_s": 120.01896704199999,
+  "average_fps": 25.031059486853092,
+  "passed": true
+}
