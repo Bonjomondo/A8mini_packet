@@ -1,4 +1,5 @@
 #include "A8VideoPipeline.h"
+#include "A8GimbalController.h"
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -30,6 +31,9 @@ int main(int argc, char *argv[]) {
     parser.addHelpOption(); parser.addVersionOption();
     parser.addOptions({
         {{"u", "url"}, "RTSP address", "url", "rtsp://192.168.2.112:8554/a8mini"},
+        {"control-host", "Gimbal gateway or directly reachable camera", "host", "192.168.2.112"},
+        {"control-port", "Gimbal TCP and UDP port", "port", "37264"},
+        {"controls", "Open the gimbal control tab"},
         {"credentials", "JSON file containing username and password", "file", "artifacts/client-credentials.json"},
         {"test", "Play a test pattern"},
         {"file", "Play a local video file", "path"},
@@ -58,6 +62,7 @@ int main(int argc, char *argv[]) {
     }
     // Must precede engine.load(), because the plugin registers its QML type.
     A8VideoPipeline video(!software);
+    A8GimbalController gimbal;
     QJsonArray events;
     QString previousState, previousError;
     // Disconnect the diagnostic lambda before its captured locals are destroyed.
@@ -71,6 +76,15 @@ int main(int argc, char *argv[]) {
     });
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("a8Video", &video);
+    engine.rootContext()->setContextProperty("a8Gimbal", &gimbal);
+    engine.rootContext()->setContextProperty("initialControlHost", parser.value("control-host"));
+    bool portOk = false;
+    int controlPort = parser.value("control-port").toInt(&portOk);
+    if (!portOk || controlPort < 1 || controlPort > 65535) {
+        qCritical() << "--control-port must be between 1 and 65535"; return 2;
+    }
+    engine.rootContext()->setContextProperty("initialControlPort", controlPort);
+    engine.rootContext()->setContextProperty("initialControlTab", parser.isSet("controls") ? 1 : 0);
     engine.rootContext()->setContextProperty("initialUrl", parser.value("url"));
     engine.rootContext()->setContextProperty("initialUsername", credentials.value("username").toString("a8viewer"));
     engine.rootContext()->setContextProperty("initialPassword", credentials.value("password").toString());
@@ -92,6 +106,9 @@ int main(int argc, char *argv[]) {
     };
     QTimer::singleShot(0, &video, start);
     QObject::connect(&app, &QCoreApplication::aboutToQuit, &video, &A8VideoPipeline::stop);
+    QObject::connect(&app, &QCoreApplication::aboutToQuit, &gimbal, &A8GimbalController::disconnectControl);
+    QObject::connect(&app, &QGuiApplication::applicationStateChanged, &gimbal,
+        [&](Qt::ApplicationState state) { if (state != Qt::ApplicationActive) gimbal.stopAll(); });
     if (parser.isSet("restart-after")) {
         bool ok = false; int seconds = parser.value("restart-after").toInt(&ok);
         if (!ok || seconds < 1 || seconds > 86400) return 2;

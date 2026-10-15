@@ -1,10 +1,12 @@
 # A8 mini 视频 Probe
 
+云台与相机控制已加入右侧“云台控制”页签，操作、TCP/UDP 分工及网关部署见 [云台控制](GIMBAL_CONTROL.md)。
+
 本阶段交付独立视频窗口和可复用 `A8VideoPipeline`。默认连接 `rtsp://192.168.2.112:8554/a8mini`，读取 `artifacts/client-credentials.json` 中的 `username` / `password`，并自动播放。凭据文件已被 Git 忽略，密码不会出现在报告中。
 
 ## 当前 Mac 直接运行
 
-双击项目根目录的 **`启动视频Probe.command`**，或在终端执行：
+双击项目根目录的 **`Start_Video_Probe.command`**，或在终端执行：
 
 ```bash
 bash scripts/run-probe-macos.sh
@@ -47,7 +49,7 @@ bash scripts/run-probe-macos.sh --software
 
 `qmlglsink` 必须在 QML 加载前创建以注册 `GstGLVideoItem`。初始化顺序和渲染线程启动参考 [GStreamer 官方示例](https://github.com/GStreamer/gstreamer/blob/main/subprojects/gst-plugins-good/tests/examples/qt/qmlsink/main.cpp) 和 [qmlglsink 文档](https://gstreamer.freedesktop.org/documentation/qmlgl/qmlglsink.html)。
 
-后续接地面站只需链接 `a8video` 库，将对象提供给 QML，在加载 QML 后调用 `attach(videoItem)`，再调用 `play(url, username, password, 300)`。软件模式使用 `A8VideoPipeline(false)`，通过 Loader 避免加载 GL 视频 QML。机载检测程序不需要变更。
+后续接地面站只需链接 `a8video` 库，将对象提供给 QML，在加载 QML 后调用 `attach(videoItem)`，再调用 `play(url, username, password, 300)`。云台控制可独立链接 `a8gimbal` 库。软件模式使用 `A8VideoPipeline(false)`，通过 Loader 避免加载 GL 视频 QML；云台控制仍可使用。机载检测程序不需要变更。
 
 ## 其他电脑的构建
 

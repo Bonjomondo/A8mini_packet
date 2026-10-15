@@ -1,10 +1,10 @@
 # A8 mini Ubuntu / Jetson 视频代理
 
 地面端 **Qt 5.15 + GStreamer + qmlglsink 视频 Probe** 已加入本仓库。
-本机 Mac 双击 `启动视频Probe.command` 即可连接 Orin；运行、构建和后续集成说明见 [视频 Probe](docs/VIDEO_PROBE.md)。
-这一版仅视频，不部署云台控制网关。
+本机 Mac 双击 `Start_Video_Probe.command` 即可连接 Orin；运行、构建和后续集成说明见 [视频 Probe](docs/VIDEO_PROBE.md)。
+已加入云台与相机控制，右侧“云台控制”页签连接 `192.168.2.112:37264`。连续转动/变焦走 UDP，停止及重要离散操作走 TCP；接口和 Orin 网关安装说明见 [云台控制](docs/GIMBAL_CONTROL.md)。
 
-已部署 MediaMTX v1.21.1，提供 A8 mini 原始 H.265 视频的 RTSP/TCP 代理。当前阶段只做视频，控制网关未部署。
+已部署 MediaMTX v1.21.1，提供 A8 mini 原始 H.265 视频的 RTSP/TCP 代理。云台控制使用独立的 `a8mini-control` 服务。
 
 ```text
 A8 mini 192.168.144.25:8554/main.264（H.265 / 1080p25）

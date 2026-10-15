@@ -9,7 +9,7 @@ ApplicationWindow {
     height: 760
     minimumWidth: 800
     minimumHeight: 560
-    title: "A8 mini · Video Probe"
+    title: "A8 mini · 视频与云台"
     color: "#10151f"
 
     header: ToolBar {
@@ -17,7 +17,7 @@ ApplicationWindow {
         RowLayout {
             anchors.fill: parent
             anchors.leftMargin: 20; anchors.rightMargin: 20
-            Label { text: "A8 mini  /  视频 Probe"; color: "#f1f5f9"; font.pixelSize: 20; font.bold: true }
+            Label { text: "A8 mini  /  视频与云台"; color: "#f1f5f9"; font.pixelSize: 20; font.bold: true }
             Item { Layout.fillWidth: true }
             Rectangle { width: 9; height: 9; radius: 5; color: a8Video.state === "PLAYING" ? "#4ade80" : "#fbbf24" }
             Label { text: a8Video.state; color: "#f1f5f9"; font.bold: true }
@@ -50,8 +50,19 @@ ApplicationWindow {
             }
         }
         ColumnLayout {
-            Layout.preferredWidth: 280; Layout.minimumWidth: 280; Layout.maximumWidth: 300
-            Layout.fillWidth: false; Layout.fillHeight: true; spacing: 12
+            Layout.preferredWidth: 330; Layout.minimumWidth: 330; Layout.maximumWidth: 330
+            Layout.fillHeight: true
+            TabBar {
+                id: tabs; Layout.fillWidth: true
+                currentIndex: initialControlTab
+                onCurrentIndexChanged: a8Gimbal.stopAll()
+                TabButton { text: "视频" }
+                TabButton { text: "云台控制" }
+            }
+            StackLayout {
+                Layout.fillWidth: true; Layout.fillHeight: true; currentIndex: tabs.currentIndex
+                ColumnLayout {
+            spacing: 12
             Label { text: "连接视频"; font.pixelSize: 18; font.bold: true; color: "#f1f5f9" }
             Label { text: "RTSP 地址"; color: "#94a3b8" }
             TextField { id: url; Layout.fillWidth: true; Layout.minimumWidth: 0; Layout.maximumWidth: 280; text: initialUrl; selectByMouse: true }
@@ -84,6 +95,9 @@ ApplicationWindow {
             Label {
                 Layout.fillWidth: true; wrapMode: Text.WordWrap; color: "#64748b"
                 text: "H.265 · RTSP/TCP · 默认 300 ms\n视频停滞自动重连，主动断开停止重连。"
+            }
+                }
+                GimbalPanel { Layout.fillWidth: true; Layout.fillHeight: true }
             }
         }
     }
