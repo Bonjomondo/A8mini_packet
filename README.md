@@ -18,21 +18,21 @@ A8 mini 192.168.144.25:8554/main.264（H.265 / 1080p25）
 | 连接网络 | 播放地址 | 地址配置 |
 | --- | --- | --- |
 | 地面端有线 192.168.1.x | `rtsp://192.168.1.5:8554/a8mini` | 本机已有静态 IP |
-| 地面端 Wi-Fi 192.168.2.x | `rtsp://192.168.2.113:8554/a8mini` | 当前 DHCP 地址，后续可能变化 |
+| 地面端 Wi-Fi 192.168.2.x | `rtsp://192.168.2.112:8554/a8mini` | 当前静态 IP |
 | Jetson 本机 | `rtsp://127.0.0.1:8554/a8mini` | 本机回环 |
 
 播放用户名为 `a8viewer`。随机密码在本目录的 `artifacts/client-credentials.json`，权限为 0600。请将账号密码填入地面端播放器或 Probe 配置。凭据文件及 `artifacts/mediamtx.installed.yml` 含密码，不要随诊断日志提交到仓库。sudo 密码没有写入任何文件。
 
 仅允许本机、192.168.1.0/24、192.168.2.0/24 读流，并要求正确凭据。没有发布权限。API 和 metrics 只监听本机回环。RTSP 是当前局域网方案使用的非 TLS TCP 连接。
 
-现有有线静态 IP 保持原样；Wi-Fi 实测是 DHCP，本次没有修改 NetworkManager 配置。方案中 `192.168.0.108` 是示例，不能用于当前本机。地面端需要能够路由到上述地址；路由器的无线客户端隔离也可能影响外部播放。
+现有有线静态 IP 保持原样；Wi-Fi 地址现已由用户改为静态 IP `192.168.2.112`，客户端配置已同步更新。方案中 `192.168.0.108` 是示例，不能用于当前本机。地面端需要能够路由到上述地址；路由器的无线客户端隔离也可能影响外部播放。
 
 ## Mac / Windows 播放基线
 
 安装好 GStreamer 后，在同一局域网运行以下命令，将密码占位文字替换成凭据文件中的密码。Wi-Fi 地址若变化，替换 `location`。
 
 ```bash
-gst-launch-1.0 rtspsrc location=rtsp://192.168.2.113:8554/a8mini user-id=a8viewer user-pw="填入随机密码" protocols=tcp latency=300 ! rtph265depay ! h265parse ! decodebin ! videoconvert ! autovideosink
+gst-launch-1.0 rtspsrc location=rtsp://192.168.2.112:8554/a8mini user-id=a8viewer user-pw="填入随机密码" protocols=tcp latency=300 ! rtph265depay ! h265parse ! decodebin ! videoconvert ! autovideosink
 ```
 
 Windows PowerShell 可使用同一行命令。有线连接时使用 `rtsp://192.168.1.5:8554/a8mini`。Qt5 Probe 应把用户名/密码传给 `rtspsrc` 的 `user-id`、`user-pw` 属性。`qmlglsink` 的环境和 QML 渲染测试仍需在 Mac / Windows 各自验证。

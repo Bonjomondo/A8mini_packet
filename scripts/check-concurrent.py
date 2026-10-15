@@ -10,7 +10,7 @@ root = pathlib.Path(__file__).resolve().parent.parent
 jobs = [
     ('direct-host', 'rtsp://192.168.144.25:8554/main.264', True),
     ('wired-proxy-host', 'rtsp://192.168.1.5:8554/a8mini', False),
-    ('wifi-proxy-host', 'rtsp://192.168.2.113:8554/a8mini', False),
+    ('wifi-proxy-host', 'rtsp://192.168.2.112:8554/a8mini', False),
 ]
 
 def run(job):

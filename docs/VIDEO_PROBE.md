@@ -1,6 +1,6 @@
 # A8 mini 视频 Probe
 
-本阶段交付独立视频窗口和可复用 `A8VideoPipeline`。默认连接 `rtsp://192.168.2.113:8554/a8mini`，读取 `artifacts/client-credentials.json` 中的 `username` / `password`，并自动播放。凭据文件已被 Git 忽略，密码不会出现在报告中。
+本阶段交付独立视频窗口和可复用 `A8VideoPipeline`。默认连接 `rtsp://192.168.2.112:8554/a8mini`，读取 `artifacts/client-credentials.json` 中的 `username` / `password`，并自动播放。凭据文件已被 Git 忽略，密码不会出现在报告中。
 
 ## 当前 Mac 直接运行
 

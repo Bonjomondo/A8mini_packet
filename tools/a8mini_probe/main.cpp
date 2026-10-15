@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     parser.setApplicationDescription("Qt5 / GStreamer A8 mini video Probe");
     parser.addHelpOption(); parser.addVersionOption();
     parser.addOptions({
-        {{"u", "url"}, "RTSP address", "url", "rtsp://192.168.2.113:8554/a8mini"},
+        {{"u", "url"}, "RTSP address", "url", "rtsp://192.168.2.112:8554/a8mini"},
         {"credentials", "JSON file containing username and password", "file", "artifacts/client-credentials.json"},
         {"test", "Play a test pattern"},
         {"file", "Play a local video file", "path"},
